@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/bg_matchelement"
+    android:layout_width="match_parent"
+    android:paddingTop="5dp"
+    android:paddingBottom="5dp"
+    android:paddingLeft="5dp"
+    android:paddingRight="5dp"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:layout_marginTop="8dp"
+        android:layout_marginLeft="15dp"
+        android:fontFamily="@font/rs_light"
+        android:id="@+id/subjectName"
+        android:textStyle="bold"
+        android:text="Subject Name"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        ></TextView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/rs_light"
+        android:text="0"
+        android:layout_marginLeft="15dp"
+        android:textStyle="bold"
+        android:layout_marginTop="2dp"
+        android:id="@+id/local_attended_classes"
+        android:textSize="20sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/subjectName"></TextView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/rs_light"
+        android:text="/"
+        android:layout_marginTop="2dp"
+        android:textStyle="bold"
+        android:layout_marginLeft="15dp"
+        android:id="@+id/slash"
+        app:layout_constraintLeft_toRightOf="@id/local_attended_classes"
+        app:layout_constraintTop_toBottomOf="@id/subjectName"
+        android:textSize="20sp"></TextView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/rs_light"
+        android:textSize="20sp"
+        android:layout_marginTop="2dp"
+        android:textStyle="bold"
+        android:layout_marginLeft="15dp"
+        android:id="@+id/local_total_classes"
+        app:layout_constraintLeft_toRightOf="@id/slash"
+        app:layout_constraintTop_toBottomOf="@id/subjectName"
+        android:text="0"></TextView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/rs_light"
+        android:textSize="20sp"
+        android:layout_marginTop="2dp"
+        android:textStyle="bold"
+        android:layout_marginLeft="30dp"
+        android:id="@+id/local_percentage"
+        app:layout_constraintLeft_toRightOf="@id/local_total_classes"
+        app:layout_constraintTop_toBottomOf="@id/subjectName"
+        android:text="0%"></TextView>
+
+    <ImageView
+        android:id="@+id/button_increase"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="30dp"
+        android:src="@drawable/ic_add_box"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/local_percentage">
+        ></ImageView>
+
+    <ImageView
+        android:id="@+id/button_decrease"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/ic_box_minus"
+        android:layout_marginBottom="30dp"
+        android:layout_marginLeft="5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/button_increase">
+
+    </ImageView>
+
+    <ImageView
+        android:id="@+id/button_edit"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginBottom="30dp"
+        android:layout_marginLeft="5dp"
+        android:src="@drawable/ic_baseline_edit"
+        app:layout_constraintLeft_toRightOf="@id/button_delete"
+        app:layout_constraintBottom_toBottomOf="parent"
+        >
+    </ImageView>
+    <ImageView
+        android:id="@+id/button_delete"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/ic_baseline_delete"
+        app:layout_constraintLeft_toRightOf="@id/button_decrease"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginLeft="5dp"
+        android:layout_marginBottom="30dp">
+
+    </ImageView>
+
+    <TextView
+        android:id="@+id/subject_comment"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/local_attended_classes"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="15dp"
+        android:textSize="15dp"
+        android:fontFamily="@font/rs_light"
+        android:text="Comment"
+        android:textStyle="bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        ></TextView>
+</androidx.constraintlayout.widget.ConstraintLayout>
